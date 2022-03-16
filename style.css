@@ -1,0 +1,457 @@
+/*-----------------------------------------------------------------------------------
+
+	Template Name: Version College
+	Template URI: http://coderitem.com
+	Description: This is Version College web site. 
+	Author: Shahidul Islam
+	Author URI: http://shahidul44.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+	1. Typography
+	2. Header Area 
+	3. Iteam Area
+	4. Footer Area
+
+-----------------------------------------------------------------------------------*/
+
+/*****************************************************/
+/**************    1. Typography   *******************/
+/*****************************************************/
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    background: #FFFFFF;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.align-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.no-padding {
+    padding: 0;
+}
+.section-padding {
+    padding: 100px 0;
+}
+  /*****************************************************/
+ /**************    2. Header Area   ****************/
+/*****************************************************/
+.header-area {
+    background: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+}
+.header {
+    padding: 38px 0;
+    border-bottom: 1px solid #515369;
+}
+.main-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+.main-menu ul li a {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #cbccd3;
+    margin-left: 40px;
+}
+.main-menu ul li:hover > a {
+    color: #fff;
+    transition: 0.5s;
+}
+/*Sticky Section*/
+.header-sticky .sticky {
+    position: relative;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #30344e;
+	z-index: 2;
+}
+.sticky .header {
+    border: none;
+}
+/* Dropdown menu */
+.main-menu ul ul {
+	background-color: #892b2b;
+    min-width: 120%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 40px);
+    transition: 0.5s;
+    z-index: 9999;
+}
+.main-menu ul ul::after {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 43%;
+	border-bottom: 10px solid #892b2b;
+	border-top: 10px solid transparent;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+}
+.main-menu ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 15px);
+}
+.main-menu ul ul li {
+    display: block;
+    text-align: center;
+}
+.main-menu ul ul li a {
+    margin-left: 0;
+    padding: 4px 10px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+.main-menu ul ul li:hover a {
+    color: #fff;
+    background-color: #1e2555;
+} 
+
+.main-menu ul ul li:last-child a {
+    border-bottom: none;
+}
+.banner-content h1 {
+    color: #fff;
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+.banner-content p {
+	color: #fff;
+	font-size: 20px;
+	text-transform: capitalize;
+	margin-bottom: 70px;
+	line-height: 30px;
+}
+.banner-content .btn {
+	color: #fff;
+	background-color: #e84545;
+	padding: 15px 54px;
+	font-weight: 400;
+    text-transform: uppercase;
+}
+.banner-content .btn:hover {
+    background-color: #e84545e3;
+}
+/*Mobile-menu*/
+.mobile-menu {
+    display: none;
+}
+.active {
+    color: #fff;
+}
+  /*****************************************************/
+ /**************    3. Iteam Area     ******************/
+/*****************************************************/
+.icon {
+	color: #e84545;
+    font-size: 60px;
+    margin-bottom: 34px;
+}
+.feature-content h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px
+}
+.feature-content p {
+    color: #80858b;
+    font-size: 14px;
+}
+.section {
+    padding-top: 80px;
+}
+.feature {
+    margin-bottom: 70px
+}
+  /*****************************************************/
+ /**************    3. Iteam Area     ******************/
+/*****************************************************/
+.work {
+    position: relative;
+    overflow: hidden;
+}
+.work a {
+    display: inline;
+}
+.work a img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.work:hover a img {
+    transform: scale(1.3);
+}
+.work .work-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e85351;
+    text-align: center; 
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.work-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.work-center h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+    transform: translateY(-30px);
+    transition: 0.2s;
+}
+.work-content p {
+    color: #fff;
+    font-size: 14px;
+    transform: translateY(30px);
+    transition: 0.2s;
+}
+.work:hover .work-content {
+    visibility: visible;
+    opacity: 0.8;
+}
+.work:hover h3,
+.work:hover p {
+    transform: translate(0);
+    transition: 0.3s;
+}
+/*****************************************************/
+
+/**************    
+4. Team Area  ****************/
+/*****************************************************/
+.team img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.team h3 {
+    font-size: 22px;
+    color: #2d3033;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.team span {
+    font-size: 14px;
+    color: #e84545;
+}
+.team p {
+    color: #6c7279;
+    margin: 25px 0;
+}
+.team-social ul {
+    display: flex;
+}
+.team-social ul li a {
+    padding: 10px 13px;
+    border: 1px solid #e8ecee;
+    color: #c6cacc;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+.team-social ul li:hover a {
+	color: #333;
+	background: #ddd;
+}
+/*****************************************************/
+
+/**************    
+5. Testimonial Area  ****************/
+/*****************************************************/
+.testimonial-area {
+    background-color: #53354a;
+    overflow: hidden;
+}
+.testimonial {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	overflow: hidden;
+	height: 430px;
+}
+.myCarousel .testimonial img {
+	width: 50%;
+	height: 100%;
+}
+.testimonial-content {
+	width: 50%;
+	padding-left: 60px;
+}
+.testimonial-content p {
+	font-size: 36px;
+	color: #fff;
+	font-style: italic;
+	line-height: 50px;
+    margin-bottom: 25px;
+}
+.testimonial-content span {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+	position: absolute;
+	bottom: 2%;
+	left: 70%;
+}
+.download {
+    margin: 0 auto;
+}
+.download h2 {
+    font-size: 28px;
+    color: #2d3033;
+    margin-bottom: 16px;
+}
+.download p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3033;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.download a {
+    color: #fff;
+    background: #e84545;
+    padding: 18px 80px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+}
+/*****************************************************/
+
+/**************    
+7. About Area  ****************/
+.about-area {
+    background-color: #3a3e64;
+    overflow: hidden;
+}
+.about h3 {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.about p {
+	color: #9d9fb2;
+    text-align: center;
+}
+.location {
+	width: 150px;
+	margin: 0 auto;
+}
+.about-social ul {
+	justify-content: center;
+}
+.about-social ul li a {
+    border: 1px solid #fff;
+    color: #fff;
+}
+.about-social ul li:hover a {
+    border-color: #e8ecee;
+    color: #c6cacc;
+    background-color: transparent;
+}
+/*****************************************************/
+/**************  
+
+8. Footer Area  ****************/
+.copy-area {
+    background-color: #313454;
+    overflow: hidden;
+}
+.copy-content {
+	padding: 30px 0;
+	width: 330px;
+	margin: 0 auto;
+	text-align: center;
+}
+.copy-content p {
+    color: #808080;
+}
+.copy-content .heart {
+    color: red;
+}
+.copy-content .copy-name {
+    color: #fff;
+}
+/*****************************************************/
